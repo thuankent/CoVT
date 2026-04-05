@@ -346,8 +346,8 @@ def run_teacher_pidinet(image: Image.Image, device="cpu"):
     x = normalize(T.ToTensor()(img256)).unsqueeze(0).to(device)
 
     with torch.no_grad():
-        outputs, _, _ = net(x)
-    edge = outputs[-1].squeeze().cpu().numpy()
+        outputs, e1, _ = net(x)
+    edge = torch.sigmoid(e1).squeeze().cpu().numpy()
     return edge
 
 
