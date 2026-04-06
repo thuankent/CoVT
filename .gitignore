@@ -209,4 +209,4 @@ __marimo__/
 /train/src/anchors/*/ckpt/*
 /train/output/
 /train/scripts/*backup*
-/train/wandb/
+/train/wandb/outputs/
